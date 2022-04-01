@@ -6,7 +6,7 @@ const HIDDEN_CLASS = "hidden";
 const USERNAME_KEY = "username";
 
 function showGreetings(username) {
-  greeting.innerText = `Hello, ${username}`;
+  greeting.innerText = `How are you? ${username}`;
   greeting.classList.remove(HIDDEN_CLASS);
 }
 
@@ -20,9 +20,9 @@ function onLoginSubmit(event) {
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-if (savedUsername === null) {
+if (savedUsername) {
+  showGreetings(savedUsername);
+} else {
   loginForm.classList.remove(HIDDEN_CLASS);
   loginForm.addEventListener("submit", onLoginSubmit);
-} else {
-  showGreetings(savedUsername);
 }

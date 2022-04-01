@@ -18,9 +18,9 @@ const IMG_DIR_PATH = "img";
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-let bgImage = document.createElement("img");
-bgImage.id = "bg-image";
-bgImage.src = `${IMG_DIR_PATH}/${chosenImage}`;
-bgImage.alt = "landscape image";
+let bgImage = document.createElement("style");
+bgImage.innerText = `body {
+  background-image: url(\'${IMG_DIR_PATH}/${chosenImage}\');
+}`;
 
-document.body.appendChild(bgImage);
+document.head.appendChild(bgImage);

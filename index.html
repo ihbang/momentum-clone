@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko-kr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
     <title>Momentum</title>
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log In</button>
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote">
-      <div></div>
-      <div class="hidden"></div>
+    <div class="horizontal-center-container">
+      <form id="login-form" class="hidden">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <button>Log In</button>
+      </form>
+      <div class="vertical-center-container">
+        <div id="clock">00:00:00</div>
+        <div id="greeting" class="hidden"></div>
+      </div>
+      <div id="quote">
+        <div id="quote-text"></div>
+        <div id="quote-author"></div>
+      </div>
     </div>
+    <div id="todo">
+      <button>Todo</button>
+      <div id="todo-box">
+        <form id="todo-form">
+          <input type="text" placeholder="Add new todo" />
+          <ul id="todo-list"></ul>
+        </form>
+      </div>
+    </div>
+    <div id="weather-container"></div>
     <script src="script/greeting.js"></script>
     <script src="script/clock.js"></script>
     <script src="script/quotes.js"></script>
     <script src="script/background.js"></script>
+    <script src="script/todo.js"></script>
+    <script src="script/weather.js"></script>
   </body>
 </html>
