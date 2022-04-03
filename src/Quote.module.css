@@ -1,0 +1,25 @@
+.container {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  color: rgb(238, 238, 238);
+}
+
+.author {
+  height: 0em;
+  opacity: 0;
+  transition-property: opacity, height;
+  transition-duration: 0.3s, 0.3s;
+  transition-timing-function: ease;
+  color: gainsboro;
+}
+
+.container:hover > .author {
+  height: 1em;
+  opacity: 1;
+  transition-property: opacity, height;
+  transition-duration: 0.3s, 0.3s;
+  transition-timing-function: ease;
+}
